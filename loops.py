@@ -25,9 +25,45 @@ def print5(n):
         print("*" * i)
 
 
+def print6(n):
+    for i in range(1, n + 1):
+        for j in range(1, n - i + 2):
+            print(j, end="")
+        print("")
+
+
+def print7(n):
+    for i in range(1, n + 1):
+        print(" " * (n - i), end="")
+        print("*" * (2 * i - 1), end="")
+        print(" " * (n - i), end="")
+        print("")
+
+
+def print8(n):
+    for i in range(n):
+        print(" " * (i), end="")
+        print("*" * (2 * n - (2 * i) - 1), end="")
+        print(" " * (i), end="")
+        print("")
+
+
+def print9(n):
+    for i in range(1, n + 1):
+        print(" " * (n - i), end="")
+        print("*" * (2 * i - 1), end="")
+        print(" " * (n - i), end="")
+        print("")
+    for i in range(n):
+        print(" " * (i), end="")
+        print("*" * (2 * n - (2 * i) - 1), end="")
+        print(" " * (i), end="")
+        print("")
+
+
 def main():
     n = int(input("Enter number: "))
-    print5(n)
+    print9(n)
 
 
 main()
