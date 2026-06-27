@@ -61,9 +61,62 @@ def print9(n):
         print("")
 
 
+def print10(n):
+    for i in range(1, n * 2):
+        if i <= n:
+            print("*" * i)
+        else:
+            print("*" * (n * 2 - i))
+
+
+def print11(n):
+    for i in range(1, n + 1):
+        for j in range(1, i + 1):
+            print(((i + j + 1) % 2), end="")
+        print("")
+
+
+def print12(n):
+    for i in range(1, n + 1):
+        for a in range(1, i + 1):
+            print(a, end="")
+        print(" " * ((n * 2) - (i * 2)), end="")
+        for c in range(i, 0, -1):
+            print(c, end="")
+        print("")
+
+
+def print13(n):
+    va = 1
+    for i in range(1, n + 1):
+        for j in range(1, i + 1):
+            print(va, end="")
+            va += 1
+        print("")
+
+
+def print14(n):
+    for i in range(1, n + 1):
+        for j in range(0, i):
+            print(chr(ord("A") + j), end="")
+        print("")
+
+
+def print15(n):
+    for i in range(1, n + 1):
+        for j in range(0, n - i + 1):
+            print(chr(ord("A") + j), end="")
+        print("")
+
+
+def print16(n):
+    for i in range(n):
+        print(chr(ord("A") + i) * (i + 1))
+
+
 def main():
     n = int(input("Enter number: "))
-    print9(n)
+    print16(n)
 
 
 main()
