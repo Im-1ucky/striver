@@ -114,9 +114,104 @@ def print16(n):
         print(chr(ord("A") + i) * (i + 1))
 
 
+def print17(n):
+    for i in range(1, n + 1):
+        print(" " * (n - i), end="")
+        for j in range((2 * i) - 1):
+            if j <= i - 1:
+                print(chr(ord("A") + j), end="")
+            else:
+                print(chr(ord("A") + (2 * i - 2 - j)), end="")
+        print(" " * (n - i))
+
+
+def print18(n):
+    for i in range(1, n + 1):
+        for j in range(i):
+            print(chr(ord("E") - i + j + 1), end="")
+        print("")
+
+
+def print19(n):
+    for i in range(n):
+        for j in range(n):
+            if j < n - i:
+                print("*", end="")
+            else:
+                print(" ", end="")
+        for j in range(n):
+            if j < i:
+                print(" ", end="")
+            else:
+                print("*", end="")
+        print("")
+    for i in range(n):
+        for j in range(n):
+            if j <= i:
+                print("*", end="")
+            else:
+                print(" ", end="")
+        for j in range(n):
+            if (n - i - 1 - j) <= 0:
+                print("*", end="")
+            else:
+                print(" ", end="")
+        print("")
+
+
+def print20(n):
+    for i in range(n):
+        for j in range(n):
+            if j <= i:
+                print("*", end="")
+            else:
+                print(" ", end="")
+        for j in range(n):
+            if j < n - i - 1:
+                print(" ", end="")
+            else:
+                print("*", end="")
+        print("")
+    for i in range(1, n):
+        for j in range(n):
+            if j < n - i:
+                print("*", end="")
+            else:
+                print(" ", end="")
+        for j in range(n):
+            if j < i:
+                print(" ", end="")
+            else:
+                print("*", end="")
+        print("")
+
+
+def print21(n):
+    for i in range(n):
+        for j in range(n):
+            if i == 0 or (i + 1) == n:
+                print("*" * n, end="")
+                break
+            elif j == 0 or (j + 1) == n:
+                print("*", end="")
+            else:
+                print(" ", end="")
+        print("")
+
+
+def print22(n):
+    for i in range(n * 2 - 1):
+        for j in range(n * 2 - 1):
+            if j == 0 or j == 2 * n - 2 or i == 0 or i == 2 * n - 2:
+                print(n, end="")
+            else:
+                print(n - min(i, j, 2 * n - i - 2, 2 * n - j - 2), end="")
+        print("")
+
+
 def main():
     n = int(input("Enter number: "))
-    print16(n)
+    print22(n)
 
 
 main()
