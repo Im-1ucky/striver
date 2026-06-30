@@ -28,17 +28,21 @@ def q3(arr: list[int]) -> bool:
 def q4(arr: list[int]) -> int:
     a = 0
     b = 1
-    count = 1
     while b < len(arr):
         if arr[a] != arr[b]:
             a += 1
             arr[a] = arr[b]
             b += 1
-            count += 1
         else:
             b += 1
-    arr.append(arr[b - 1])
-    return count
+    return a + 1
+
+
+def q5(nums: list[int], k: int) -> None:
+    for i in range(k):
+        ele = nums[k]
+        nums[i], nums[k] = nums[k + 1], nums[i]
+    nums[i + 1] = ele
 
 
 def main():
